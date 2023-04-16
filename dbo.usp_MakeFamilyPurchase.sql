@@ -10,7 +10,7 @@ AS
 DECLARE @ID_F INT= (SELECT F.ID_Family FROM dbo.Family AS F WHERE F.SurName=@FamilySurName)
 
 IF @ID_F IS NULL
-SELECT 'Ошибка, введенная семья отсутствует в базе данных!'
+SELECT 'РћС€РёР±РєР°, РІРІРµРґРµРЅРЅР°СЏ СЃРµРјСЊСЏ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚ РІ Р±Р°Р·Рµ РґР°РЅРЅС‹С…!'
 
 ELSE
 DECLARE @SUM_V DECIMAL(18,2)=(SELECT SUM(B.Value) FROM dbo.Basket AS B 
